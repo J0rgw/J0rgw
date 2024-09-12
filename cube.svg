@@ -1,0 +1,86 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">		
+    <Style>
+        body {
+            margin left: 500;
+            padding: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            margin left: 500;
+            transform-style: preserve-3d;
+            animation: rotate 30s infinite linear;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: middle;
+            transform-style: preserve-3d;
+        }
+
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 1.;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .front {
+            transform: rotateY(0deg) translateZ(100px);
+            background-image: url("https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png");
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+            background-image: url("https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png");
+        }
+        .back {
+            transform: rotateY(180deg) translateZ(100px);
+            background-image: url("https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png");
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-image: url("https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png");
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(100px);
+            background-image: url("https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png");
+        }
+        .bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-image: url("https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png");
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0) rotateY(0);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </Style>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <div class="scene">
+            <div class="cube">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face right"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+        </div>
+    </div>
+</svg>
