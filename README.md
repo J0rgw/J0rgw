@@ -1,4 +1,4 @@
-<img src="./cube.svg" alt="cube" /> 
+<img src="./cube.svg" alt="cube"> 
 
 # Hi Developer.
 ### this is my _main_ repo 
