@@ -1,4 +1,5 @@
-<img src="./cube.svg" alt="cube">
+<img src="./cube.svg" alt="cube"> this is not a gif <i>Made With CSS</i>
+
 
 # Hi Developer.
 ### this is my _main_ repo 
